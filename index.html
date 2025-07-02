@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Forecast App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-700 border-blue-300 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-6 rounded-xl shadow-md w-[90%] max-w-md text-center">
+    
+    <h1 class="text-2xl font-bold mb-4 text-blue-700">Weather Forecast App</h1>
+
+    <input
+      id="cityInput"
+      type="text"
+      placeholder="Enter city name"
+      class="border border-gray-300 px-4 py-2 rounded-md w-full mb-4"
+    />
+
+    <button
+      id="searchBtn"
+      class="bg-blue-500 text-white px-4 py-2 rounded-md w-full hover:bg-blue-600 transition">
+      Search Weather
+    </button>
+
+    <button
+     id="currentLocationBtn"
+     class="bg-green-500 text-white px-4 py-2 rounded-md w-full mt-2 hover:bg-green-600 transition mb-4">
+     🗾 Get Weather for Current Location
+    </button>
+
+    <div class="mb-4 text-left">
+      <label class="block font-medium text-gray-700 mb-1">Recent Searches:</label>
+      <select id="recentDropdown" class="w-full p-2 border border-gray-300 rounded-md">
+        <option value="">-- Select a city --</option>
+      </select>
+    </div>
+
+    <div id="weatherResult" class="mt-6 hidden text-left"></div>
+
+    <div id="forecastResult" class="mt-8 hidden text-left">
+      <h3 class="text-lg font-semibold mb-3">5-Day Forecast</h3>
+      <div id="forecastCards" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
